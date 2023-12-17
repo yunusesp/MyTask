@@ -1,4 +1,4 @@
-package com.masterbranch.utilities;
+package Utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

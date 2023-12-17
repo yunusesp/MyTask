@@ -1,14 +1,14 @@
-package com.masterbranch.utilities;
+package Utilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -48,7 +48,7 @@ public class BaseTest {
 
         sparkReporter.config().setReportName("Extent Report Test");
 
-        reports.setSystemInfo("Environment", "QA");
+        reports.setSystemInfo("Environment", "QA Yunus Emre");
         reports.setSystemInfo("Browser", ConfigReader.getProperties("browser"));
         reports.setSystemInfo("OS", "os.name");
     }
@@ -57,8 +57,11 @@ public class BaseTest {
     public void setUp() {
 
         driver = Driver.getDriver();
+        driver.manage().window().setSize(new Dimension(350, 750));
         driver.get(ConfigReader.getProperties("url"));
-        driver.manage().window().maximize();
+
+
+
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
@@ -86,7 +89,7 @@ public class BaseTest {
         }else if (result.getStatus()==ITestResult.SKIP){
             extentLogger.skip("Test skipped: " + result.getName());
         }
-      Driver.closeDriver();
+     // Driver.closeDriver();
     }
 
     @AfterTest

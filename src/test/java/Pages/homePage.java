@@ -1,157 +1,66 @@
 package Pages;
 
 
-import Utilities.ConfigReader;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 
-public class LoginPage extends PageObject {
+public class homePage extends PageObject {
 
 
     // TODO
     @FindBy(id = "logo")
     public WebElement title;
 
-
-    @FindBy(className = "btn btn-link dropdown-toggle")
+    @FindBy(xpath = "//*[@id='form-currency']/div/button")
     public WebElement checkMoney;
-
-    @FindBy(className = "btn btn-primary")
-    public WebElement continuebtn;
 
     @FindBy(name = "GBP")
     public WebElement MoneyFormat;
 
-    @FindBy(className = "fa fa-phone")
-    public WebElement contacnt;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[1]/div/div[3]/button[1]/i")
+    public WebElement macbookAddShoppingCart;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[2]/div/div[3]/button[1]")
+    public WebElement iphoneAddShoppingCart;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[3]/div/div[3]/button[1]/i")
+    public WebElement appleMonitorAddShoppingCart;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[1]/div/div[3]/button[2]/i")
+    public WebElement macbookAddWishList;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[2]/div/div[3]/button[2]/i")
+    public WebElement iphoneAddWishList;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[3]/div/div[3]/button[2]")
+    public WebElement appleCinemaMonitorAddWishList;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[4]/div/div[3]/button[2]/i")
+    public WebElement canonCameraAddWishList;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='wishlist-total']/i")
+    public WebElement wishList;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(id = "button-cart")
+    public WebElement addToCart;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='logo']/h1/a")
+    public WebElement backHomePage;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='content']/div[2]/div[4]/div/div[3]/button[1]/i")
+    public WebElement canonCameraAddShoppingCart;
 
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
-
-    @FindBy(id = "form-currency")
-    public WebElement moneyPound;
+    @FindBy(xpath = "//*[@id='top-links']/ul/li[4]/a/i")
+    public WebElement shoppingCartBtn;
 
     @FindBy(id = "form-currency")
     public WebElement moneyPound;
 
 
-    //************* Metodlar *************
-
-  /*  public void login(){
-        username.sendKeys(ConfigReader.getProperties("username"));
-
-        password.sendKeys(ConfigReader.getProperties("password"));
-
-        loginButton.click();
-    }
-
-    public String getUserNameText(){
-        String username = userValue.getText();
-        return username;
-    }
-
-    public void negativeLogin(String user, String pass){
-        username.sendKeys(user);
-
-        password.sendKeys(pass);
-
-        loginButton.click();
-    }
-
-    public String errorMessage(){
-        return errorMessage.getText();
-    }
-}
-*/
 }
